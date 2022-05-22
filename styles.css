@@ -1,0 +1,284 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;   
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+p{
+    font-size: 0.85rem;
+}
+
+.heading{
+    position: relative;
+    background: url("https://images.unsplash.com/photo-1535385793343-27dff1413c5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGZyYW1lZCUyMGFydCUyMG9uJTIwdGhlJTIwd2FsbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+    background-position: 50% 90%;
+    height: 250px;
+    width: 100%;
+}
+
+.heading::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: rgba(0,0,0,0.7);
+}
+
+.header{
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    width: 85%;
+    position: absolute;
+    top: 230px;
+    max-width: 800px;
+
+}
+
+input,.btn-search{
+    color: white;
+    padding: 1em 0.5em;
+    border: none;
+}
+
+input{
+    background-color: #2E2E2F;
+    width: 75%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    padding: 1em 1em 1em 3em;
+    position: relative;
+    color: #9CA3AF;
+}
+
+.fa-search{
+    position: absolute;
+    left: 15px;
+    top: 30%;
+}
+
+.fa-plus-circle, .fa-minus-circle{
+    font-size: 1.3rem;
+}
+
+.fa-plus-circle:hover{
+    color: green;
+}
+
+.fa-minus-circle:hover{
+    color: red;
+}
+
+.btn-search{
+    color: white;
+    background-color: #4B4B4B;
+    width: 25%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-search:hover{
+    color: green
+}
+
+.movie-container{
+    background-color: #121212;
+    padding: 5em 0;
+    /* 
+     */
+}
+
+.watchlist{
+    min-height: 320px;
+}
+
+.movie-center{
+    display: flex;
+    justify-content: space-between;
+    min-height: 300px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+hr{
+    border-color: #4B4B4B;
+    width: 90%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.movie-poster{
+    width: 35%;
+    margin-right: 1em;
+}
+
+.movie-poster img{
+    width: 100%;
+    height: 100%;
+}
+
+.movie-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+
+.movie-title h3{
+    font-weight: 400;
+
+}
+
+#movie-rating{
+    font-size: 0.7rem;
+}
+
+.movie-detail{
+    display: flex;
+    align-items: center;
+}
+
+
+.movie-detail p{
+    padding-right: 2em;
+}
+
+
+
+.watchlist-btn{
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+.default-job{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+}
+
+.default-job img{
+    width: 100px;
+}
+
+.default-job p{
+    color: #2E2E2F;
+    font-size: 1.2rem;
+}
+
+.watchlist-default{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    color: #2E2E2F;
+}
+
+.watchlist-default p{
+    font-size: 1.3rem;
+}
+
+
+.unable-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    text-align: center;
+    color: #2E2E2F;
+}
+
+.unable-search p{
+    font-size: 1.1rem;
+}
+
+
+@media (min-width: 800px){
+    h3{
+        font-size: 1.4rem;
+    }
+    p{
+        font-size: 1.1rem;  
+    }
+
+    .movie-poster{
+        width: 20%;
+    }
+    .movie-poster img{
+        height: 100%;
+    }
+
+    .movie-info{
+        width: 70%;
+    }
+
+    .fa-plus-circle, .fa-minus-circle{
+        font-size: 1.5rem;
+        padding-right: 0.3em;
+    }
+
+    .watchlist-btn{
+        font-size: 1.1rem;
+    }
+
+    .default-job{
+        height: 500px;
+    }
+
+    .watchlist{
+        min-height: 500px;
+        
+    }
+    .unable-search{
+        
+        height: 500px;
+       
+    }
+    
+    .unable-search p{
+        font-size: 1.4rem;
+    }
+}
