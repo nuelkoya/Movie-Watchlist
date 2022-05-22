@@ -49,7 +49,7 @@ function displayWatchList(){
         console.log(movieList)
         document.querySelector('.watchlist').innerHTML = ''
         for(let movie of movieList){
-            fetch(`http://www.omdbapi.com/?apikey=35b7a2ab&t=${movie}`)
+            fetch(`https://www.omdbapi.com/?apikey=35b7a2ab&t=${movie}`)
                 .then(response => response.json())
                 .then(data => { 
                     html = `
@@ -106,20 +106,10 @@ function displayWatchList(){
 
 
 
-
-
- 
-
-
-
-
-
-
-
 searchBtn.addEventListener('click', function(e){
     e.preventDefault()
     movieTitle = searchInput.value
-    fetch(`http://www.omdbapi.com/?apikey=35b7a2ab&s=${movieTitle}`)
+    fetch(`https://www.omdbapi.com/?apikey=35b7a2ab&s=${movieTitle}`)
         .then(response => response.json())
         .then(data => displayMovies(data.Search))
 })
@@ -138,7 +128,7 @@ function displayMovies(movies){
         for(let movie of movies){
             movieTitle = movie.Title
             console.log(movieTitle)
-             fetch(`http://www.omdbapi.com/?apikey=35b7a2ab&t=${movieTitle}`)
+             fetch(`https://www.omdbapi.com/?apikey=35b7a2ab&t=${movieTitle}`)
                  .then(response => response.json())
                  .then(data => {
                      
